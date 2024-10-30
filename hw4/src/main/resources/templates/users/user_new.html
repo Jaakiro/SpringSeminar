@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый пользователь &ndash; MyShop</title>
+</head>
+<body>
+<a data-th-href="@{list}">&larr; К списку пользователей</a>
+<h1>Новый пользователь</h1>
+<form method="post" data-th-action="@{/users/create}">
+    <label>
+        Имя:<br>
+        <input type="text" name="name" data-th-value="${payload?.name}">
+    </label><br>
+    <label>
+        Почта:<br>
+        <textarea name="email"  data-th-value="${payload?.email}"></textarea>
+    </label><br>
+    <button type="submit">Создать</button>
+</form>
+</body>
+</html>

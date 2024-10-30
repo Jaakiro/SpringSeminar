@@ -1,0 +1,11 @@
+USE `usersdb`;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(50),
+    email VARCHAR(50));
+
+INSERT INTO users (name, email)
+VALUES  ('Axe', 'axe@mail.ru'),
+        ('NoAxe', 'noaxe@mail.ru'),
+        ('AxeAxe', 'axeaxe@mail.ru');
