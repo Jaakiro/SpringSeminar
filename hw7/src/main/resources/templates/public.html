@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Public page</title>
+</head>
+<body>
+    <h1>PUBLIC PAGE</h1>
+    <a th:href="@{/private}">Приватный контент</a><br>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
