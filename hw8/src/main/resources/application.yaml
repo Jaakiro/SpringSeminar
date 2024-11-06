@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/catalogue
+      username: catalogue
+      password: catalogue
+    jpa:
+      show-sql: true
+#  datasource:
+#    url: jdbc:postgresql://localhost:5433/users
+#    username: qwe
+#    password: qweasd
+#  jpa:
+#    show-sql: true
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: http://localhost:8080
