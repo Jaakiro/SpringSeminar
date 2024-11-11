@@ -1,0 +1,24 @@
+server:
+  port: 8082
+shop:
+  catalogue:
+    service:
+      uri: http://localhost:8081
+spring:
+  application:
+    name: manager
+  datasource:
+    url: jdbc:postgresql://localhost:5433/users
+    username: users
+    password: users
+    jpa:
+      show-sql: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,prometheus
